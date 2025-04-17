@@ -29,8 +29,8 @@ const FloatingHearts = () => {
         if (newHearts.length > 20) {
           newHearts.shift();
         }
-        // Add a new heart
-        newHearts.push(createHeart(prevHearts.length + 1));
+        // Add a new heart with a unique ID
+        newHearts.push(createHeart(Date.now()));
         return newHearts;
       });
     }, 2000);
@@ -42,7 +42,7 @@ const FloatingHearts = () => {
     return {
       id,
       x: Math.random() * 100,
-      y: Math.random() * 30, // Começa em diferentes alturas
+      y: Math.random() * 30, // Start at different heights
       size: 10 + Math.random() * 20,
       opacity: 0.3 + Math.random() * 0.5,
       animationDuration: 10 + Math.random() * 20
@@ -68,16 +68,18 @@ const FloatingHearts = () => {
           ❤️
         </div>
       ))}
-      <style jsx>{`
-        @keyframes float {
-          0% {
-            transform: translateY(0);
+      <style>
+        {`
+          @keyframes float {
+            0% {
+              transform: translateY(0);
+            }
+            100% {
+              transform: translateY(-1000px) rotate(${Math.random() * 360}deg);
+            }
           }
-          100% {
-            transform: translateY(-1000px) rotate(${Math.random() * 360}deg);
-          }
-        }
-      `}</style>
+        `}
+      </style>
     </div>
   );
 };
