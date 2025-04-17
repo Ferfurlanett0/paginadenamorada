@@ -19,49 +19,49 @@ const RoadTimeline = () => {
       title: "Nosso primeiro encontro",
       date: "Início da jornada",
       description: "Aquele momento especial quando nossos olhares se cruzaram pela primeira vez.",
-      image: "public/lovable-uploads/7c52ae50-b580-4018-97d8-cf6cc1bfdd82.png"
+      image: "/public/lovable-uploads/7c52ae50-b580-4018-97d8-cf6cc1bfdd82.png"
     },
     {
       id: 2,
       title: "Primeiro beijo",
       date: "Um mês depois",
       description: "O momento mágico que nunca vamos esquecer.",
-      image: "public/lovable-uploads/0d2eed64-7595-439c-a246-cacf3306d6ec.png"
+      image: "/public/lovable-uploads/0d2eed64-7595-439c-a246-cacf3306d6ec.png"
     },
     {
       id: 3,
       title: "Namoro oficial",
       date: "Três meses depois",
       description: "Quando decidimos começar oficialmente nossa história juntos.",
-      image: "public/lovable-uploads/c8a84603-0ac0-41aa-b1d3-9c39aa599bb2.png"
+      image: "/public/lovable-uploads/c8a84603-0ac0-41aa-b1d3-9c39aa599bb2.png"
     },
     {
       id: 4,
       title: "Um dos nossos primeiros eventos em familia",
       date: "Seis meses de amor",
       description: "Momentos que eu terei guardado para sempre.",
-      image: "public/lovable-uploads/891f11a3-d95b-47c4-a3dc-529264d6971a.png"
+      image: "/public/lovable-uploads/891f11a3-d95b-47c4-a3dc-529264d6971a.png"
     },
     {
       id: 5,
       title: "Nossa primeira viagem em famlia juntos",
       date: "Nove meses de amor",
       description: "Momentos inesquecíveis explorando lugares novos juntos.",
-      image: "public/lovable-uploads/8cb7b3ca-1675-4579-a336-b3b1874caef2.png"
+      image: "/public/lovable-uploads/8cb7b3ca-1675-4579-a336-b3b1874caef2.png"
     },
     {
       id: 6,
       title: "1 ano juntos!",
       date: "Um ano de amor",
       description: "Celebrando 365 dias de momentos especiais.",
-      image: "public/lovable-uploads/39bbda82-3e13-4f07-99bc-a6fa3872acf1.png"
+      image: "/public/lovable-uploads/39bbda82-3e13-4f07-99bc-a6fa3872acf1.png"
     },
     {
       id: 7,
       title: "1 ano e 3 meses",
       date: "Hoje",
       description: "Olhando para trás com carinho e para frente com esperança.",
-      image: "public/lovable-uploads/18403ffe-dfd1-4b11-968f-a804d8f83c38.png"
+      image: "/public/lovable-uploads/18403ffe-dfd1-4b11-968f-a804d8f83c38.png"
     }
   ]);
 
@@ -72,7 +72,7 @@ const RoadTimeline = () => {
       <header 
         className="py-16 text-center relative overflow-hidden"
         style={{
-          background: 'linear-gradient(135deg, rgba(255,192,203,0.4) 0%, rgba(255,105,180,0.3) 100%), url("/placeholder.svg")',
+          background: 'linear-gradient(135deg, rgba(255,192,203,0.4) 0%, rgba(255,105,180,0.3) 100%), url("/placeholder.jpg")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundBlendMode: 'soft-light'
