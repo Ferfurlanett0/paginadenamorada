@@ -1,6 +1,6 @@
 
 import { Camera } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface Milestone {
   id: number;
@@ -35,7 +35,7 @@ const MilestoneCard = ({ milestone, isEven, isLast }: MilestoneCardProps) => {
   return (
     <div className={`flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} items-center mb-24 relative`}>
       {/* Circle marker on the road */}
-      <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-primary shadow-lg z-20 flex items-center justify-center">
+      <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-primary shadow-lg z-20 flex items-center justify-center hover:scale-110 transition-transform">
         <span className="text-white font-bold">{milestone.id}</span>
       </div>
       
@@ -47,12 +47,19 @@ const MilestoneCard = ({ milestone, isEven, isLast }: MilestoneCardProps) => {
           <h3 className="text-2xl font-handwriting text-primary mb-1">{milestone.title}</h3>
           <p className="text-sm text-muted-foreground mb-3">{milestone.date}</p>
           <p className="text-foreground">{milestone.description}</p>
+          
+          {/* Extra decorative elements */}
+          <div className="flex justify-center mt-3">
+            {[...Array(3)].map((_, i) => (
+              <div key={i} className="w-1.5 h-1.5 rounded-full bg-primary/50 mx-1 animate-pulse"></div>
+            ))}
+          </div>
         </div>
       </div>
       
-      {/* Photo space - empty 2:3 ratio frame */}
+      {/* Photo space */}
       <div className={`w-full md:w-5/12 ${isEven ? 'md:pl-12' : 'md:pr-12'} mt-8 md:mt-0`}>
-        <div className="relative bg-secondary border-8 border-white shadow-lg rounded-md overflow-hidden" style={{ paddingBottom: '150%' }}>
+        <div className="relative bg-secondary border-8 border-white shadow-lg rounded-md overflow-hidden hover:shadow-2xl transition-shadow duration-300" style={{ paddingBottom: '150%' }}>
           {image ? (
             <img 
               src={image} 
@@ -80,6 +87,13 @@ const MilestoneCard = ({ milestone, isEven, isLast }: MilestoneCardProps) => {
           <div className="absolute top-1 right-1 w-3 h-3 bg-secondary border border-primary/20 rounded-full"></div>
           <div className="absolute bottom-1 left-1 w-3 h-3 bg-secondary border border-primary/20 rounded-full"></div>
           <div className="absolute bottom-1 right-1 w-3 h-3 bg-secondary border border-primary/20 rounded-full"></div>
+          
+          {/* Decorative ribbon */}
+          <div className="absolute -top-1 -right-1 w-24 h-24 overflow-hidden">
+            <div className="absolute top-0 right-0 transform rotate-45 bg-primary/70 text-white py-1 px-8 text-xs font-semibold shadow-sm" style={{ width: '120px', top: '15px', right: '-30px' }}>
+              Amor Eterno
+            </div>
+          </div>
         </div>
       </div>
     </div>

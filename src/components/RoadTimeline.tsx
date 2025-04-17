@@ -3,14 +3,13 @@ import { Heart, Camera } from "lucide-react";
 import { useState } from "react";
 import MilestoneCard from "./MilestoneCard";
 import AnimatedFlower from "./AnimatedFlower";
-import FloatingHearts from "./FloatingHearts";
 
 interface Milestone {
   id: number;
   title: string;
   date: string;
   description: string;
-  image?: string;
+  image: string;
 }
 
 const RoadTimeline = () => {
@@ -19,53 +18,71 @@ const RoadTimeline = () => {
       id: 1,
       title: "Nosso primeiro encontro",
       date: "Início da jornada",
-      description: "Aquele momento especial quando nossos olhares se cruzaram pela primeira vez."
+      description: "Aquele momento especial quando nossos olhares se cruzaram pela primeira vez.",
+      image: "public/lovable-uploads/7c52ae50-b580-4018-97d8-cf6cc1bfdd82.png"
     },
     {
       id: 2,
       title: "Primeiro beijo",
       date: "Um mês depois",
-      description: "O momento mágico que nunca vamos esquecer."
+      description: "O momento mágico que nunca vamos esquecer.",
+      image: "public/lovable-uploads/0d2eed64-7595-439c-a246-cacf3306d6ec.png"
     },
     {
       id: 3,
       title: "Namoro oficial",
       date: "Três meses depois",
-      description: "Quando decidimos começar oficialmente nossa história juntos."
+      description: "Quando decidimos começar oficialmente nossa história juntos.",
+      image: "public/lovable-uploads/c8a84603-0ac0-41aa-b1d3-9c39aa599bb2.png"
     },
     {
       id: 4,
       title: "Nossa primeira viagem",
       date: "Seis meses de amor",
-      description: "Momentos inesquecíveis explorando lugares novos juntos."
+      description: "Momentos inesquecíveis explorando lugares novos juntos.",
+      image: "public/lovable-uploads/891f11a3-d95b-47c4-a3dc-529264d6971a.png"
     },
     {
       id: 5,
       title: "Conhecendo a família",
       date: "Nove meses de amor",
-      description: "Expandindo nosso amor para nossas famílias."
+      description: "Expandindo nosso amor para nossas famílias.",
+      image: "public/lovable-uploads/8cb7b3ca-1675-4579-a336-b3b1874caef2.png"
     },
     {
       id: 6,
       title: "1 ano juntos!",
       date: "Um ano de amor",
-      description: "Celebrando 365 dias de momentos especiais."
+      description: "Celebrando 365 dias de momentos especiais.",
+      image: "public/lovable-uploads/39bbda82-3e13-4f07-99bc-a6fa3872acf1.png"
     },
     {
       id: 7,
       title: "1 ano e 3 meses",
       date: "Hoje",
-      description: "Olhando para trás com carinho e para frente com esperança."
+      description: "Olhando para trás com carinho e para frente com esperança.",
+      image: "public/lovable-uploads/18403ffe-dfd1-4b11-968f-a804d8f83c38.png"
     }
   ]);
 
   return (
     <div className="min-h-screen bg-background pb-20">
-      <FloatingHearts />
       <header className="py-16 text-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-pink-100 to-purple-100 opacity-70 -z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-pink-100 via-purple-100 to-pink-100 opacity-70 -z-10"></div>
         
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 relative">
+          {/* Nomes do casal */}
+          <div className="mb-6 transform -rotate-2">
+            <h1 className="text-6xl md:text-7xl font-handwriting text-primary animate-float inline-block relative">
+              Fernando 
+              <span className="text-5xl md:text-6xl absolute -right-6 top-0 transform -rotate-12">❤️</span>
+            </h1>
+            <span className="mx-3 text-4xl text-foreground">&</span>
+            <h1 className="text-6xl md:text-7xl font-handwriting text-primary animate-float inline-block">
+              Ana Laura
+            </h1>
+          </div>
+
           <h1 className="text-5xl md:text-6xl font-handwriting text-primary mb-4 animate-float">Nossa Jornada de Amor</h1>
           <h2 className="text-2xl md:text-3xl font-romantic text-foreground mb-8">1 ano e 3 meses de momentos especiais</h2>
           
@@ -74,12 +91,24 @@ const RoadTimeline = () => {
             <span className="text-xl font-romantic">Uma estrada de memórias</span>
             <Heart className="text-primary animate-pulse-slow" fill="currentColor" />
           </div>
+
+          {/* Decoração adicional */}
+          <div className="absolute left-4 top-8 w-16 h-16 rotate-12 opacity-40">
+            <svg viewBox="0 0 24 24" fill="none" className="w-full h-full text-primary">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="currentColor" />
+            </svg>
+          </div>
+          <div className="absolute right-4 top-8 w-16 h-16 -rotate-12 opacity-40">
+            <svg viewBox="0 0 24 24" fill="none" className="w-full h-full text-primary">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="currentColor" />
+            </svg>
+          </div>
         </div>
       </header>
 
       <div className="container mx-auto px-4 relative">
-        {/* Road path */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 w-8 md:w-12 bg-secondary h-full rounded-full shadow-inner z-0"></div>
+        {/* Road path - estrada mais bonita */}
+        <div className="absolute left-1/2 transform -translate-x-1/2 w-8 md:w-12 bg-gradient-to-b from-secondary via-pink-100 to-secondary h-full rounded-full shadow-inner z-0"></div>
         
         {/* Milestones */}
         <div className="relative z-10">
@@ -100,6 +129,16 @@ const RoadTimeline = () => {
           
           <div className="mt-12">
             <AnimatedFlower />
+          </div>
+          
+          {/* Assinatura do casal */}
+          <div className="mt-16 mb-8">
+            <div className="flex justify-center items-center space-x-4">
+              <p className="text-2xl font-handwriting text-primary transform -rotate-6">Fernando</p>
+              <Heart className="text-primary" fill="currentColor" />
+              <p className="text-2xl font-handwriting text-primary transform rotate-6">Ana Laura</p>
+            </div>
+            <p className="mt-2 text-sm text-muted-foreground">Para sempre juntos</p>
           </div>
         </div>
       </div>

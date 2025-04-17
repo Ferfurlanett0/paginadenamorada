@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 interface Heart {
   id: number;
   x: number;
+  y: number;
   size: number;
   opacity: number;
   animationDuration: number;
@@ -41,6 +42,7 @@ const FloatingHearts = () => {
     return {
       id,
       x: Math.random() * 100,
+      y: Math.random() * 30, // Começa em diferentes alturas
       size: 10 + Math.random() * 20,
       opacity: 0.3 + Math.random() * 0.5,
       animationDuration: 10 + Math.random() * 20
@@ -52,17 +54,30 @@ const FloatingHearts = () => {
       {hearts.map(heart => (
         <div
           key={heart.id}
-          className="absolute bottom-0 text-primary"
+          className="absolute text-primary"
           style={{
             left: `${heart.x}%`,
+            top: `${heart.y}%`,
             opacity: heart.opacity,
             fontSize: `${heart.size}px`,
-            animation: `float ${heart.animationDuration}s linear infinite`
+            animation: `float ${heart.animationDuration}s linear infinite`,
+            transform: `translateY(-${heart.y * 10}px)`,
+            zIndex: -1
           }}
         >
           ❤️
         </div>
       ))}
+      <style jsx>{`
+        @keyframes float {
+          0% {
+            transform: translateY(0);
+          }
+          100% {
+            transform: translateY(-1000px) rotate(${Math.random() * 360}deg);
+          }
+        }
+      `}</style>
     </div>
   );
 };
