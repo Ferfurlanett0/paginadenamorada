@@ -25,7 +25,7 @@ const RoadTimeline = () => {
       id: 2,
       title: "Primeiro beijo",
       date: "Um mês depois",
-      description: "O momento mágico que nunca vamos esquecer(não temos foto do primeiro beijo mas acho que essa vale bastante pois eu amo muito esse dia🥰).",
+      description: "O momento mágico que nunca vamos esquecer(não temos foto do primeiro beijo mas acho que essa vale bastante pois eu amo muito esse dia 🥰).",
       image: "/0d2eed64-7595-439c-a246-cacf3306d6ec.png"
     },
     {
