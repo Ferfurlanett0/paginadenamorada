@@ -32,7 +32,7 @@ const MilestoneCard = ({
   };
   return <div className={`flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} items-center mb-24 relative`}>
       {/* Circle marker on the road */}
-      <div className="absolute left-1/2 transform -translate-x-2/2 w-12 h-12 rounded-full bg-primary shadow-lg z-20 flex items-center justify-center hover:scale-110 transition-transform">
+      <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-primary shadow-lg z-20 flex items-center justify-center hover:scale-110 transition-transform">
         <span className="text-white font-bold">{milestone.id}</span>
       </div>
       
