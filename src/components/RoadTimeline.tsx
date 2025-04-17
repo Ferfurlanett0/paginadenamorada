@@ -1,3 +1,4 @@
+
 import { Heart, Camera } from "lucide-react";
 import { useState } from "react";
 import MilestoneCard from "./MilestoneCard";
@@ -65,17 +66,19 @@ const RoadTimeline = () => {
   ]);
 
   return (
-    <div className="min-h-screen bg-background pb-20">
+    <div className="min-h-screen pb-20 relative">
+      <div className="absolute inset-0 bg-gradient-to-b from-pink-100/60 via-white/40 to-pink-100/60 -z-10"></div>
+      
       <header 
         className="py-16 text-center relative overflow-hidden"
         style={{
-          background: 'linear-gradient(135deg, rgba(255,192,203,0.3) 0%, rgba(255,105,180,0.2) 100%), url("/placeholder.svg")',
+          background: 'linear-gradient(135deg, rgba(255,192,203,0.4) 0%, rgba(255,105,180,0.3) 100%), url("/placeholder.svg")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundBlendMode: 'soft-light'
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-pink-100/20 via-purple-100/20 to-pink-100/20 opacity-70 -z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-pink-100/30 via-purple-100/30 to-pink-100/30 opacity-80 -z-10"></div>
         
         <div className="container mx-auto px-4 relative">
           {/* Nomes do casal */}
