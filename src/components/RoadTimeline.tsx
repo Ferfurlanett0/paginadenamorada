@@ -1,4 +1,3 @@
-
 import { Heart, Camera } from "lucide-react";
 import { useState } from "react";
 import MilestoneCard from "./MilestoneCard";
@@ -67,29 +66,37 @@ const RoadTimeline = () => {
 
   return (
     <div className="min-h-screen bg-background pb-20">
-      <header className="py-16 text-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-pink-100 via-purple-100 to-pink-100 opacity-70 -z-10"></div>
+      <header 
+        className="py-16 text-center relative overflow-hidden"
+        style={{
+          background: 'linear-gradient(135deg, rgba(255,192,203,0.3) 0%, rgba(255,105,180,0.2) 100%), url("/placeholder.svg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundBlendMode: 'soft-light'
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-pink-100/20 via-purple-100/20 to-pink-100/20 opacity-70 -z-10"></div>
         
         <div className="container mx-auto px-4 relative">
           {/* Nomes do casal */}
           <div className="mb-6 transform -rotate-2">
-            <h1 className="text-6xl md:text-7xl font-handwriting text-primary animate-float inline-block relative">
+            <h1 className="text-6xl md:text-7xl font-handwriting text-primary inline-block relative">
               Fernando 
               <span className="text-5xl md:text-6xl absolute -right-6 top-0 transform -rotate-12">❤️</span>
             </h1>
             <span className="mx-3 text-4xl text-foreground">&</span>
-            <h1 className="text-6xl md:text-7xl font-handwriting text-primary animate-float inline-block">
+            <h1 className="text-6xl md:text-7xl font-handwriting text-primary inline-block">
               Ana Laura
             </h1>
           </div>
 
-          <h1 className="text-5xl md:text-6xl font-handwriting text-primary mb-4 animate-float">Nossa Jornada de Amor</h1>
+          <h1 className="text-5xl md:text-6xl font-handwriting text-primary mb-4">Nossa Jornada de Amor</h1>
           <h2 className="text-2xl md:text-3xl font-romantic text-foreground mb-8">1 ano e 3 meses de momentos especiais</h2>
           
           <div className="flex items-center justify-center space-x-2">
-            <Heart className="text-primary animate-pulse-slow" fill="currentColor" />
+            <Heart className="text-primary" fill="currentColor" />
             <span className="text-xl font-romantic">Uma estrada de memórias</span>
-            <Heart className="text-primary animate-pulse-slow" fill="currentColor" />
+            <Heart className="text-primary" fill="currentColor" />
           </div>
 
           {/* Decoração adicional */}
