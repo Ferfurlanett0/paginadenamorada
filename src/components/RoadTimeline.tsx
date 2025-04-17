@@ -37,16 +37,16 @@ const RoadTimeline = () => {
     },
     {
       id: 4,
-      title: "Nossa primeira viagem",
+      title: "Um dos nossos primeiros eventos em familia",
       date: "Seis meses de amor",
-      description: "Momentos inesquecíveis explorando lugares novos juntos.",
+      description: "Momentos que eu terei guardado para sempre.",
       image: "public/lovable-uploads/891f11a3-d95b-47c4-a3dc-529264d6971a.png"
     },
     {
       id: 5,
-      title: "Conhecendo a família",
+      title: "Nossa primeira viagem em famlia juntos",
       date: "Nove meses de amor",
-      description: "Expandindo nosso amor para nossas famílias.",
+      description: "Momentos inesquecíveis explorando lugares novos juntos.",
       image: "public/lovable-uploads/8cb7b3ca-1675-4579-a336-b3b1874caef2.png"
     },
     {
